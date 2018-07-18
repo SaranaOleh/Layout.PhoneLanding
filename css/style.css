@@ -1,0 +1,379 @@
+*, html, body{
+    margin: 0; padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;
+    font-family: Tahoma, Verdana, Arial}
+
+@font-face {
+    font-family: 'Teko';
+    src: url('../fonts/Teko/teko-regular-webfont.eot');
+    src: url('../fonts/Teko/teko-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Teko/teko-regular-webfont.woff2') format('woff2'),
+    url('../fonts/Teko/teko-regular-webfont.woff') format('woff'),
+    url('../fonts/Teko/teko-regular-webfont.ttf') format('truetype'),
+    url('../fonts/Teko/teko-regular-webfont.svg#tekoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kaushanscript';
+    src: url('../fonts/Kaushanscript/kaushanscript-regular-webfont.eot');
+    src: url('../fonts/Kaushanscript/kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Kaushanscript/kaushanscript-regular-webfont.woff2') format('woff2'),
+    url('../fonts/Kaushanscript/kaushanscript-regular-webfont.woff') format('woff'),
+    url('../fonts/Kaushanscript/kaushanscript-regular-webfont.ttf') format('truetype'),
+    url('../fonts/Kaushanscript/kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.section{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+.header{
+    text-align: right;
+    background: #616264;
+}
+.header .logo-shadow{
+    position: absolute;
+        top: -4px;
+        left: 4px;
+    width: 80px;
+    height: 100px;
+    background: rgba(0,0,0,0.2);
+    border-bottom-right-radius: 100px 100px;
+    transform: rotateY(180deg);
+}
+.header .logo-shadow::after{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 10px;
+    right: -9px;
+    top: -3px;
+    background: rgba(0,0,0,0.2);
+}
+.header .logo{
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 80px;
+    height: 100px;
+    background: #ee7b5c;
+    border-bottom-right-radius: 100px 30px;
+    box-shadow: 0 0 4px 4px #e97350 inset;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 1.1em;
+}
+.header .logo p{
+    text-transform: capitalize;
+    font-family: "Kaushanscript";
+    font-weight: 900;
+    color: white;
+}
+.header .logo p:first-child{
+    font-size: 1.5em;
+}
+.header .header-nav{
+    line-height: 55px;
+}
+.header .header-nav>a{
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-family: "Teko";
+    font-weight: bolder;
+    color: white;
+
+}
+.header .header-nav>a.active, .header .header-nav>a:hover{
+    box-shadow:  0 2px 2px 3px #525252 inset;
+    border-radius: 12px;
+}
+
+/*-----------------------------preview---------------------------------*/
+
+.preview{
+    background: #efebe2;
+}
+.preview .container{
+    min-height: 440px;
+}
+.preview .preview-image{
+    width: 394px;
+    height: 416px;
+    background: url("../images/phone2.png");
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+}
+.preview .preview-describe{
+    width: 400px;
+    padding-top: 95px;
+}
+.preview .preview-describe h1{
+    text-transform: uppercase;
+    font-family: "Teko";
+    font-size: 3.5em;
+    color: #606365;
+}
+.preview .preview-describe p:nth-of-type(1){
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #b9bcbd;
+}
+.preview .preview-describe p:nth-of-type(2){
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #9c9b9c;
+}
+.preview .preview-icons{
+    margin-top: 15px;
+    display: flex;
+}
+.preview .preview-icons div{
+    width: 55px;
+    height: 55px;
+    background: white;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 6px #e6e1d8 inset;
+    text-align: center;
+}
+.preview .preview-icons div span{
+    line-height: 55px;
+    font-size: 1.1em;
+}
+.preview .preview-icons div:last-child span{
+    font-size: 1.4em;
+    color: #d0cbc2;
+}
+.preview .preview-icons div:first-child span{
+    color: #e56b45;
+}
+.preview .preview-icons div:nth-child(2) span{
+    color: #9ec432;
+}
+.preview .preview-icons div:nth-child(3) span{
+    color: #4e4d48;
+}
+.preview .preview-describe p:last-of-type{
+    font-size: 0.7em;
+    margin-top: 20px;
+    color: #aeafaf;
+}
+
+/*------------------------------------------tab--------------------------------------*/
+
+.tab-header{
+    background: #383733;
+    padding: 12px 0;
+}
+.tab-nav{
+    display: flex;
+    counter-reset: section;
+}
+.tab-nav .tab{
+    padding: 5px 9px 5px 40px;
+    box-shadow: 0px 1px 1px 1px black inset;
+    margin-right: 12px;
+    border-bottom: 2px solid #403e3a;
+    position: relative;
+}
+.tab-nav .tab p:first-child{
+    text-transform: uppercase;
+    font-family: "Teko";
+    font-size: 1em;
+    color: #a6998f;
+}
+.tab-nav .tab p:last-child{
+    color: #4d4943;
+    font-size: 0.7em;
+}
+.tab-nav .tab::before{
+    position: absolute;
+    content: counter(section)".";
+    counter-increment: section;
+    display: block;
+    width: 40px;
+    height: 100%;
+    left: 0;
+    font-family: "Kaushanscript";
+    font-size: 2em;
+    text-align: center;
+    line-height: 32px;
+    color: #bc7e56;
+}
+.tab-nav .tab:hover p:first-child, .tab-nav .tab:hover::before,
+.tab-nav .tab.active p:first-child, .tab-nav .tab.active::before  {
+    color: #d6d6d6;
+}
+.tab-nav .tab:hover p:last-child, .tab-nav .tab.active p:last-child{
+    color: #b77146;
+}
+.tab-content{
+    background: #46453f;
+    min-height: 100px;
+    padding-bottom: 34px;
+}
+.tab-nav .tab:hover, .tab-nav .tab.active{
+    background: #2e2f2e;
+}
+.tab-content .posts, .tab-content .links{
+    display: flex;
+    justify-content: space-between;
+}
+.tab-content .posts .post{
+    width: 30%;
+    padding: 40px 0;
+}
+.post h2{
+    font-family: "Teko";
+    text-transform: uppercase;
+    margin-left: 40px;
+    margin-bottom: 22px;
+    color: white;
+    position: relative;
+}
+.post p{
+    font-size: 0.8em;
+    color: #6b6a68;
+}
+.post h2::before{
+    position: absolute;
+    content: "\E802";
+    font-family: "fontello";
+    width: 35px;
+    height: 100%;
+    left: -35px;
+    color: #35332e;
+}
+.post:nth-child(2) h2:before{
+    content: "\E803";
+}
+.post:nth-child(3) h2:before{
+    content: "\E804";
+}
+.tab-content .links .link{
+    width: 20%;
+    min-height: 54px;
+    position: relative;
+}
+.tab-content .links .link:first-child{
+    background: url("../images/appStore.jpg") no-repeat;
+    background-size: contain;
+}
+.tab-content .links .link:first-child a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.tab-content .links .link:last-child h2{
+    font-family: "Teko";
+    color: #d16c54;
+    text-transform: uppercase;
+}
+.tab-content .links .link:last-child p{
+    font-size: 0.8em;
+    color: #726f6a;
+}
+.tab-content .links .link:last-child{
+    background: #3e3d3c;
+    padding: 14px;
+    box-shadow: 5px 5px 0px 0px black;
+}
+.tab-content .links .link:nth-child(2) p, .tab-content .links .link:nth-child(3) p{
+    text-indent: 20px;
+    font-size: 0.8em;
+    color: #726f6a;
+    position: relative;
+}
+.tab-content .links .link:nth-child(2) span, .tab-content .links .link:nth-child(3) span{
+    position: absolute;
+    color: #825e4b;
+    font-size: 0.8em;
+    right: -15px;
+    bottom: -15px;
+    text-transform: capitalize;
+}
+.tab-content .links .link:nth-child(2)::before, .tab-content .links .link:nth-child(3)::before{
+    content: "\E805";
+    font-family: "fontello";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 16px;
+    color: #b97858;
+}
+/*----------------------------------footer-nav-----------------------------------------*/
+.footer{
+    background: #373330;
+}
+.footer-block-one{
+    border: 4px solid #3f3b38;
+    padding: 6px 0;
+}
+.footer-nav{
+    display: flex;
+    align-items: center;
+}
+.footer-nav .logo p{
+    font-family: "Kaushanscript";
+    color: #272624;
+    text-transform: capitalize;
+}
+.footer-nav .logo p:first-child{
+    font-size: 1.5em;
+}
+.footer-nav .nav{
+    margin-left: 30px;
+}
+.footer-nav .nav a{
+    color: #6d4a3b;
+    text-transform: capitalize;
+    font-size: 0.6em;
+}
+.footer-links a{
+    color: #272624;
+    font-size: 1.2em;
+}
+.footer-links a:hover{
+    color: #bdb4b4;
+}
+.footer-block-one .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-block-two{
+    padding: 20px 0 25px 0;
+}
+.copyrights{
+    text-align: right;
+    font-size: 0.8em;
+    color: #4e4a47;
+}
+.copyrights span{
+    color: #6f5342;
+}
+.layble{
+    width: 74px;
+    height: 40px;
+    background: url("../images/cat.png") no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 70px;
+    filter: drop-shadow(0px 0px 2px gray);
+}
